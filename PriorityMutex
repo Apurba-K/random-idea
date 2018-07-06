@@ -1,0 +1,18 @@
+PriorityMutex :
+
+Challanges which influences the idea :
+Mutex are never biased regarding competeing threads, hence even if a high priority thread came up to lock an mutex, 
+it may not get the mutex immediately. 
+In worst case, in scenario where there are lots of low priority threads and single priority thread, 
+the priority thread may need to wait considerable time to lock the mutex.
+
+In real life scenarios, we need priority tasks to be completed before low priority task.
+As normal mutex does not bias, hence only with mutex, it is difficult to achieve biased behaviou between tasks.
+
+The Concept :
+There could be a mutex, which allow threds to success in locking based on its priority. For example :
+Higher priority thread will always get more chances to be successful on locking
+Lower priority thred should not suffer limitless because of this bias.
+
+
+
