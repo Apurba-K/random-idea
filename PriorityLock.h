@@ -5,9 +5,9 @@
 class PriorityLock
 {
 	BiasedMutex& bm;
-	BiasedMutex::BIAS bias;
+	int curReqPriority;
 
 public:
-	PriorityLock(BiasedMutex& bm_, BiasedMutex::BIAS bias_);
+	PriorityLock(BiasedMutex& bm_, int priority);
 	~PriorityLock();
 };
